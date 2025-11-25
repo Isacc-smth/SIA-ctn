@@ -1,0 +1,37 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  height: 100%;
+  font-family: Roboto, Arial;
+  padding-top: 70px;
+  margin: 0;
+  background-color: white;
+}
+
+main {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 5vw;
+}
+
+.container {
+  width: 90vw;
+}
+
+
+.footer p {
+  text-align: center;
+  color: #777777;
+  box-sizing: border-box;
+}
+
+hr {
+  margin-top: 60px;
+  border: none;
+  border-top: 5px solid rgb(155, 18, 18);
+  height: 0;
+}

@@ -1,0 +1,86 @@
+button, #backBtn, #addBtn, #downloadBtn {
+  color: white;
+  border-radius: 0px;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: Roboto, Arial;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-button {
+  background-color: rgba(35, 158, 35, 0.85);
+}
+
+.add-button {
+  background-color: rgba(201, 49, 44, 0.85);
+}
+
+.save-button {
+  background-color: rgba(41, 122, 192, 0.85);
+}
+
+.pdf-button {
+  color: gray;
+  background: none;
+  margin: 40;
+}
+
+.delete-button {
+  background-color: rgba(201, 49, 44, 0.85);
+}
+
+.download-button {
+  background-color: rgba(35, 158, 35, 0.85);
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.back-button:hover,
+.add-button:hover,
+.save-button:hover,
+.delete-button:hover,
+.download-button:hover {
+  opacity: 0.8;
+}
+
+.email-button {
+  color: #000; 
+}
+
+.back-icon,
+.add-icon,
+.save-icon {
+  height: 13px;
+  margin-right: 8px;
+}
+
+.download-icon {
+  height: 14px;
+  margin-right: 8px;
+}
+
+.delete-icon {
+  height: 14px;
+  margin-right: 8px;
+}
+
+#backBtn {
+  margin-right: 6px;
+}
+
+#emailInput {
+  width: 80%;
+  border: 1px solid #000;
+}
+
+#saveBtn {
+  margin-left: 6px;
+}

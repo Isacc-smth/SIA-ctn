@@ -1,0 +1,94 @@
+header {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+body {
+  padding: 0;
+}
+
+.top-section {
+  margin-bottom: 4px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.planilla-info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+  height: 40px;
+  margin-bottom: 15px;
+  color: rgb(115, 115, 115);
+  font-size: 14px;
+}
+
+.five-highlight {
+  background-color: rgba(109, 189, 35, 0.2);
+}
+
+.four-highlight {
+  background-color: rgba(23, 142, 240, 0.2);
+}
+
+.three-highlight {
+  background-color: rgba(201, 198, 44, 0.2);
+}
+
+.two-highlight {
+  background-color: rgba(201, 146, 44, 0.2);
+}
+
+.one-highlight {
+  background-color: rgba(207, 65, 60, 0.2);
+}
+
+
+
+.five-color {
+  color: rgb(33, 128, 10);
+}
+
+.four-color {
+  color: rgb(49, 112, 143);
+}
+
+.three-color {
+  color: rgb(136, 125, 24);
+}
+
+.two-color {
+  color: rgb(173, 125, 36);
+}
+
+.one-color {
+  color: rgb(143, 20, 20);
+}
+
+.escala-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grade-ranges-container {
+  display: flex;
+  align-items: center;
+}
+
+.grade-ranges-container span {
+  margin-right: 4px;
+}
+
+.freeze-toggle {
+  font-size: 16px;
+  font-weight: 500;
+}

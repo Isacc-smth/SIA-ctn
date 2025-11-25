@@ -1,0 +1,8 @@
+header {
+  background-color: rgb(128, 17, 17);
+}
+
+.header-school-name {
+  color: rgba(255, 255, 255, 0.808);
+  text-shadow: 0 0 4px #C1C1C1
+}

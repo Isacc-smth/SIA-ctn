@@ -1,0 +1,211 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  position: relative;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.table-heading {
+  grid-column: 1 / -1;
+  color: white;
+  background-color: rgba(48, 74, 190, 0.85);
+  font-size: 18px;
+  text-align: center;
+  padding: 6px;
+}
+
+.table {
+  max-width: 1500px;
+  width: 90vw;
+  display: grid;
+  font-size: 13px;
+  font-weight: 500;
+  color: #939393;
+}
+
+.table-row {
+  display: contents;
+  /* display: relative; */
+}
+
+.table-row:nth-child(odd)>.cell {
+  background-color: white;
+}
+
+.cell {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  border-right: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  padding: 8px;
+  min-height: 55px;
+}
+
+.new-tarea {
+  min-width: 120px;
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.no-spinner {
+  -moz-appearance: textfield;
+}
+
+input{
+  width: 28px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #939393;
+}
+
+input:invalid {
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: -1px;
+  outline: 2px solid red;
+  border-radius: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #939393;
+}
+
+.tarea-edit-link:hover,
+#new-tarea-link:hover {
+  text-shadow: 0 0 4px #C1C1C1;
+  transform: scale(1.01);
+}
+
+#new-tarea-link {
+  color: rgba(201, 49, 44, 0.85);
+}
+
+
+
+/* -----------Horizontal Drag----------- */
+.table-responsive {
+  /* cursor: grab; */
+  touch-action: pan-y; /* permite que el navegador maneje verticalmente, pero deja los eventos pointer para horizontal */
+  -webkit-user-select: none; /* evita selección accidental en iOS/Chrome */
+  user-select: none;
+}
+
+/* while dragging */
+.table-responsive.dragging {
+  cursor: grabbing;
+  /* evita la selección de texto en la página al arrastrar */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* -----------Freeze Alumno Columns----------- */
+
+.freeze-alumnos .col-alumno:before,
+.freeze-alumnos .col-alumno:after {
+  content: " ";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 9px;
+}
+.freeze-alumnos .col-alumno:before {
+  box-shadow: -9px 0 9px -9px inset rgba(0, 0, 0, 0.2);
+  left: -9px;
+}
+.freeze-alumnos .col-alumno:after {
+  box-shadow: 9px 0 9px -9px inset rgba(0, 0, 0, 0.2);
+  right: -9px;
+}
+
+
+
+
+/* first column: very left */
+.freeze-alumnos .col-index {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 30;
+  min-width: 30px; /* keep consistent with your grid first column (adjust if needed) */
+}
+
+/* second column: placed right after first column width (30px) */
+.freeze-alumnos .col-alumno {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 30px; /* must match the width of the first column (adjust if you change first col) */
+  z-index: 29;
+  min-width: 140px;
+}
+
+/* make sure header cells float above body cells */
+.freeze-alumnos .table-row:first-child .col-index,
+.freeze-alumnos .table-row:first-child .col-alumno {
+  z-index: 40;
+  box-shadow: none;
+}
+
+/* when sticky, avoid overlapping input focus outlines being clipped */
+.freeze-alumnos .col-alumno input,
+.freeze-alumnos .col-index input {
+  background: transparent;
+}
+
+/* small responsive tweak: if viewport narrow, reduce min-widths */
+@media (max-width: 700px) {
+  .freeze-alumnos .col-alumno {
+    min-width: 110px;
+  }
+}
+
+
+
+
+/* WARNING the following styles will give you a headache */
+
+
+.cell:first-child {
+  border-left: 1px solid #cecece;
+
+  /* background-color: pink; */
+}
+
+.table-row:nth-child(n+2) .cell:nth-child(2) {
+  justify-content: left;
+  /* background-color: pink; */
+  z-index: 1;
+}
+
+.table-row:nth-child(n+3) .cell:nth-child(n+4) {
+  align-items: start;
+  /* background-color: lightblue; */
+}
+
+.table-row:nth-child(2) .cell {
+  font-weight: bold;
+  /* background-color: yellow; */
+}
+
+.table-row:nth-child(2) .cell:nth-child(n+4) {
+  align-items: end;
+  /* background-color: lightgreen; */
+}
+
+.table-row:nth-child(2) .cell:last-child {
+  align-items: start;
+}

@@ -1,0 +1,98 @@
+.grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.planilla-grid {
+  max-width: 1400px;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 40px;
+  margin-bottom: 40px;
+}
+
+.planilla-card {
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
+  transition: all 0.15s;
+  border-radius: 10px;
+  overflow: hidden
+}
+
+.planilla-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.planilla-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.planilla-card:active {
+  transform: scale(1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+
+}
+
+.planilla-card:hover .card-heading {
+  text-shadow: 0 0 6px #C1C1C1;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(155, 18, 18);
+   /*background-color: rgb(54, 91, 255);*/ 
+  color: rgba(255, 255, 255, 0.774);
+  font-weight: 500;
+  height: 48px;
+}
+
+.card-body {
+  color: rgb(87, 87, 87);
+  padding: 20px 24px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: max-content 0.5ch 1fr; /* label | colon | value */
+  gap: 0.3rem;
+  margin-bottom: 20px;
+}
+
+.info-grid .total-tareas {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.info-grid span {
+  font-size: 20px;
+}
+
+.label { text-align: right;}
+.value { text-align: right;}
+.colon  { justify-self: center;}
+
+/* Choose class on the server side */
+.smallSize {
+  font-size: 20px;
+}
+
+.mediumSize {
+  font-size: 22px;
+}
+
+.largeSize {
+  font-size: 28px;
+}
+
+.card-footer {
+  font-size: 14px;
+  margin-bottom: 10px;
+}

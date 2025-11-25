@@ -1,0 +1,38 @@
+/* Smooth hide animation for flash messages */
+.flash, .flash-errors {
+  position: relative;
+  transition: opacity 320ms ease, transform 320ms ease, max-height 320ms ease, padding 320ms ease;
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 240px;   /* enough room for content */
+  overflow: hidden;
+  padding: 0.3rem 0.6rem;
+  margin-bottom: 4px;
+}
+
+.flash { background-color: lightblue; color: rgb(49, 112, 143)}
+.flash-errors { background-color: rgb(233, 46, 46); color: white;}
+
+/* Hidden state: fade and slide up + collapse height */
+.flash--hide, .flash-errors--hide {
+  opacity: 0;
+  transform: translateY(-8px);
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* small close button top-right */
+.flash-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  color: inherit;
+}
+.flash-close:focus { outline: 2px solid rgba(0,0,0,0.12); border-radius: 4px; }

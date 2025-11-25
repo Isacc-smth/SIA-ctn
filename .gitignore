@@ -1,0 +1,25 @@
+# Carpeta donde se compila el proyecto
+target/
+
+# NO HARCODEAR LAS API KEYS POR FAVOOOOOR
+*.properties
+
+# Script que uso para compilar rapiod
+compile.sh
+deploy.sh
+
+# Carpeta donde se compila la documentacion
+docs/
+
+# Archivos de LSP/IDE/VSCode. Es mejor dejar que el editor los genere
+.classpath
+.project
+.settings/
+.idea/
+.vscode
+
+# configuracion de mi linter de Markdown
+.markdownlint.json
+
+# antoador
+todo.md

@@ -1,0 +1,158 @@
+header {
+  height: 54px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  /* background-color: rgb(21, 55, 207); */
+
+  padding: 0px 10px;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-logo-container {
+  flex: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 159px;
+}
+
+.header-school-name {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0px 20px;
+}
+
+@media (max-width: 800px) {
+  .header-school-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header-school-name {
+    display: none;
+  }
+}
+
+#counterbalance {
+  flex: 0.2;
+}
+
+.header-logo {
+  width: 46px;
+  /*filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35));*/ 
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.right-section {
+  display: flex;
+  flex: 0.2;
+  justify-content: left;
+}
+
+.dropdown-icon {
+  width: 20px; /* Adjust size as needed */
+}
+
+.manual-container {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+}
+
+.manual-link {
+  text-align: center;
+  color: white;
+  opacity: .7;
+  text-decoration: none;
+}
+
+.manual-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 4px #C1C1C1;
+}
+
+
+/* -----------Session Drop-down----------- */
+
+.session-dropdown {
+  display: flex;
+  position: relative;
+  /* background-color: pink; */
+}
+
+.session-button {
+  color: white;
+  opacity: .7;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 0px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 85px;
+}
+
+.session-button:hover {
+  opacity: 1;
+  text-shadow: 0 0 4px #C1C1C1;
+}
+
+.session-button.open {
+  background-color: rgb(105, 12, 12);
+}
+
+/* the menu */
+.session-menu {
+  display: none; /* hidden by default */
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 180px;
+  background: white;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+  z-index: 30;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* show when open */
+.session-dropdown.open .session-menu {
+  display: block;
+}
+
+/* menu items */
+.session-item {
+  display: block;
+  padding: 5px 13px;
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+}
+
+.session-item:hover,
+.session-item:focus {
+  background: rgb(96, 125, 139);
+  color: white;
+  outline: none;
+}
+
+/* emphasize logout */
+.session-logout {
+  color: #bb1f1f;
+}
