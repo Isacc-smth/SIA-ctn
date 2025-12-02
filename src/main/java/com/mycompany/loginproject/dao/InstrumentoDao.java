@@ -5,7 +5,6 @@
 package com.mycompany.loginproject.dao;
 
 import com.mycompany.loginproject.clases.ConnectionPoolListener;
-import com.mycompany.loginproject.clases.conexion;
 import com.mycompany.loginproject.model.Instrumento;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,7 +21,7 @@ import org.mariadb.jdbc.Statement;
  * @author jonat, Isacc-smth
  */
 
-public class InstrumentoDao extends conexion {
+public class InstrumentoDao {
 
     /**
      * Obtener todos los instrumentos ordenados por nombre

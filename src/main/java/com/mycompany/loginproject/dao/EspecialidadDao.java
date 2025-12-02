@@ -5,7 +5,6 @@
 package com.mycompany.loginproject.dao;
 
 import com.mycompany.loginproject.clases.ConnectionPoolListener;
-import com.mycompany.loginproject.clases.conexion;
 import com.mycompany.loginproject.model.Especialidad;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,7 +18,7 @@ import java.util.List;
  *
  * @author jonat, Isacc-smth
  */
-public class EspecialidadDao extends conexion {
+public class EspecialidadDao {
 
     public EspecialidadDao() {
     }

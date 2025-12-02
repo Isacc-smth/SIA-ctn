@@ -1,7 +1,6 @@
 package com.mycompany.loginproject.dao;
 
 import com.mycompany.loginproject.clases.ConnectionPoolListener;
-import com.mycompany.loginproject.clases.conexion;
 import com.mycompany.loginproject.model.Curso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

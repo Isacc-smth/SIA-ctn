@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import com.mycompany.loginproject.clases.ConnectionPoolListener;
-import com.mycompany.loginproject.clases.conexion;
 
 import java.sql.ResultSet;
 

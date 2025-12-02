@@ -5,7 +5,6 @@
 package com.mycompany.loginproject.dao;
 
 import com.mycompany.loginproject.clases.ConnectionPoolListener;
-import com.mycompany.loginproject.clases.conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,7 +20,7 @@ import java.util.stream.Collectors;
  *
  * @author jonat, Isacc-smth
  */
-public class RegistroDao extends conexion {
+public class RegistroDao {
     /**
      * Obtener un mapa alumnoId -> registroId de una planilla
      *
