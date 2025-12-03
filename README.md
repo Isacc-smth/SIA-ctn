@@ -9,7 +9,7 @@ que yo considero que le falta:
 
 - Formularios ABM para las tablas. Ahora mismo se tienen que insertar manualmente en la base de datos,
   solo se pueden cargar tareas y puntajes
-- El boton de eliminar tiene problemas en la logica, cuando hosteo local funciona, pero en el server no
+- El boton de eliminar (en editar tarea) tiene problemas en la logica, cuando hosteo local funciona, pero en el server no.
 - Adaptar a las planillas del proyecto de Lujan (si se va a implementar)
 - El pooling ahora mismo es muy estricto (corta conexiones pasado una hora), capaz tengan que hacer 
   que sea mas flexible
