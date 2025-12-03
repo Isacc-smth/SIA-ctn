@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import com.mycompany.loginproject.clases.ConnectionPoolListener;
 import com.mycompany.loginproject.model.StudentRow;
 
+// TODO: Se puede fusionar con StudentRowDao
 public class StudentRowWithTasksDao {
     public static ArrayList<StudentRow> loadSingleRowFromAllTasks(int registroId) throws SQLException {
         ArrayList<StudentRow> rows = new ArrayList<>();
