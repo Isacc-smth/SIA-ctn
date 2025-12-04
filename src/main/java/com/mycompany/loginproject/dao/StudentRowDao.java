@@ -5,6 +5,7 @@
 
 package com.mycompany.loginproject.dao;
 
+import com.mycompany.loginproject.PlanillaServlet;
 import com.mycompany.loginproject.clases.ConnectionPoolListener;
 import com.mycompany.loginproject.model.Planilla;
 import com.mycompany.loginproject.model.StudentRow;
@@ -25,8 +26,23 @@ import java.util.Objects;
  */
 public class StudentRowDao {
 
+	// No suman al total de la planilla
     private static final int PUNTOS_CREDITO = 13;
 
+	/** 
+	 * Obtener Las filas de los alumnos para mostrar en PlanillaServlet
+	 *
+	 * @param planilla			  la planilla de donde se quiere obtener
+	 * @param tareaMax			  un mapa con los totales de puntos de las tareas 
+	 *								(id -> total de puntos)
+	 * @param totalPossiblePoints el total de puntos de la planilla
+	 *
+	 * @return un ArrayList con las filas, listas para mostrar en PlanillaServlet
+	 *
+	 * @throws SQLException cuando hay un error con la conexion a la BD o la consulta no es correcta
+	 *
+	 * @see PlanillaServlet
+	 * */
     public List<StudentRow> loadRowsForPlanilla(Planilla planilla,
             Map<Integer, Integer> tareaMax,
             int totalPossiblePoints) throws SQLException {
@@ -117,7 +133,15 @@ public class StudentRowDao {
         return rows;
     }
 
-    // NOTE: This method does not include the tasks names
+	/** 
+	 * Obtener una sola fila por su registroId
+	 *
+	 * @param registroId identificador del registro
+	 *
+	 * @return una fila única de un alumno, mismo formato que {@link #loadRowsForPlanilla(Planilla, Map, int)}
+	 *
+	 * @throws SQLException cuando hay un error con la conexion a la BD o la consulta no es correcta
+	 * */
     public StudentRow loadSingleRowByRegistroId(int registroId) throws SQLException {
         String sql = """
                    SELECT a.id AS alumno_id, a.nombre, a.apellido, p.tarea_id, p.puntos
@@ -161,6 +185,15 @@ public class StudentRowDao {
         }
     }
 
+	/** 
+	 * Obtener los nombres de los estudiantes asociados con una planilla
+	 *
+	 * @param planillaId el id de la planilla a la cual estan asociados los alumnos
+	 *
+	 * @return un ArrayList con los nombres de los alumnos
+	 *
+	 * @throws SQLException
+	 * */
     public ArrayList<String> getStudentNames(int planillaId) throws SQLException {
         ArrayList<String> names = new ArrayList<>();
         String sql = """ 

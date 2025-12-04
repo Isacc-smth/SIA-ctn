@@ -9,13 +9,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
+ * Clase para opeciones relacionadas con un curso de la BD
  *
- * @author jonat
+ * @author jonat, Isacc-smth
  */
 public class CursoDao {
 
     /**
-     * consultar los cursos asociados con un profesor (usuario)
+     * Consultar los cursos asociados con un profesor (usuario)
      *
      * @param userId identificador unico del profesor
      *

@@ -10,6 +10,11 @@ import jakarta.mail.Session;
 
 // NOTE: Si el algun punto queres poder enviar desde mas de un email, vas a tener que
 // refactorear bastante (no es muy buena idea, a no ser que encuentres un metodo mas facil)
+/** 
+ * Clase para obtener las credenciales para el envio de emails
+ *
+ * @author Isacc-smth
+ * */
 public class SessionManager {
     private static final Session session;
     private static final Properties sessionProps = new Properties();

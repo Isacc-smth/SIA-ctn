@@ -20,12 +20,22 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
+ * Servlet para la pagina de inicio
  *
- * @author jonat
+ * @author jonat, Isacc-smth
  */
 @WebServlet(name = "HomeServlet", urlPatterns = {"/HomeServlet"})
 public class HomeServlet extends HttpServlet {
 
+	/** 
+	 * Obtener los cursos asociados al usuario (profesor)
+	 *
+	 * @param request	la solicitud del cliente
+	 * @param response  la respuesta del servidor
+	 *
+	 * @throws ServletException cuando ocurre un error relacionado al servlet (e.j: errores en las consultas, conexion con la BD etc.)
+	 * @throws IOException		cuando ocurre un error de entrada salida (e.j: con el dispatcher para redirigir a esta página)
+	 * */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

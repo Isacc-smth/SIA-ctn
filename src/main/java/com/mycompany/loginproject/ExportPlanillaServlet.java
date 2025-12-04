@@ -27,15 +27,28 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+// NOTE: Este servlet se llama cuando se oprimer el boton de descargar dentro de una planilla
+
 /**
+ * Servlet para exportar un planilla seleccionada
  *
- * @author jonat
+ * @author jonat, Isacc-smth
  */
 @WebServlet(name = "ExportPlanillaServlet", urlPatterns = {"/ExportPlanillaServlet"})
 public class ExportPlanillaServlet extends HttpServlet {
 
+	// Los puntos créditos NO SUMAN A LA PLANILLA, estan cargados con un InstrumentoId especial
     private static final int PUNTOS_CREDITO = 13;
 
+	/** 
+	 * Generar un documento en formato XSLX (Excel) de una planilla dada
+	 *
+	 * @param request	la solicitud del cliente con los parametros de la planilla
+	 * @param response  la respuesta del servlet que contendra el documento ya generado
+	 *
+	 * @throws IOException		cuando ocurre un error de Entrada/Salida (e.j: al obtener el stream para el archivo)
+	 * @throws ServletException cuando ocurre un error relacionado al Servlet (e.j: con la consulta a la BD, problemas con la conexion, etc)
+	 * */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -153,5 +166,4 @@ public class ExportPlanillaServlet extends HttpServlet {
         }
 
     }
-
 }

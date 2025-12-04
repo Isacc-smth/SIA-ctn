@@ -1,7 +1,7 @@
 # Sistema de Información Académica (S. I. A)
 
 Este proyecto era originalmente de Jonathan Bray (por eso algunas cosas están en inglés),
-pero el profe Fede me encargo implementar algunos features. Además documenté lo que pude del Java
+pero el profesor Federico me encargo implementar algunos features. Además documenté lo que pude del Java
 y un poco del JavaScript porque hay mucho código in-line (o sea en los JSP). Aca hay algunas cosas
 que yo considero que le falta:
 
@@ -12,7 +12,7 @@ que yo considero que le falta:
 - El boton de eliminar (en editar tarea) tiene problemas en la logica, cuando hosteo local funciona, pero en el server no.
 - Adaptar a las planillas del proyecto de Lujan (si se va a implementar)
 - El pooling ahora mismo es muy estricto (corta conexiones pasado una hora), capaz tengan que hacer 
-  que sea mas flexible
+  que sea mas flexible.
 
 ## Como compilar y correr el proyecto
 
@@ -24,7 +24,7 @@ en ninguno de los dos casos.
 
 ### Documentación
 
-#### Jsdoc
+#### Jsdoc (Esta un poco mal organizada pero espero que se entienda igual)
 
 1. Instalar npm
 2. Ejectuar
@@ -37,7 +37,7 @@ en ninguno de los dos casos.
     jsdoc -c jsdoc.json # Cambiar 'jsdoc.json' si hay otro path a la configuacion
 ```
 
-#### Javadoc
+#### Javadoc (El IDE puede compilar esta parte tmb)
 
 > [!TIP]
 > Al compilar el proyecto, tambien se compila la documentacion
@@ -51,5 +51,5 @@ Si quieres compilar solo la documentacion
 ### Proyecto
 
 1. Instalar y configurar Apache TomCat 9 (o superior).
-2. Compilar su proyecto (sin ejecutar).
+2. Compilar su proyecto (sin ejecutar, no les va a dejar si no configuraron). Miren la pagina oficial para como configurar.
 3. Mover el .war generado a la carpeta webapps, en donde instalaron el TomCat.

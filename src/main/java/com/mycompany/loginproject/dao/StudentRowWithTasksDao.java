@@ -11,6 +11,18 @@ import com.mycompany.loginproject.model.StudentRow;
 
 // TODO: Se puede fusionar con StudentRowDao
 public class StudentRowWithTasksDao {
+	/** 
+	 * Obtener una fila de la tabla de PlanillaServlet, con todas las tareas, 
+	 * sus titulos y los puntajes logrados. Se puede juntar con StudentRowDao.
+	 *
+	 * @param registroId el id del registro del que se quiere obtener todas las tareas
+	 *
+	 * @return un ArrayList de StudentRow, con información adicional sobre las tareas
+	 *
+	 * @see StudentRow
+	 * @see StudentRowDao
+	 * */
+
     public static ArrayList<StudentRow> loadSingleRowFromAllTasks(int registroId) throws SQLException {
         ArrayList<StudentRow> rows = new ArrayList<>();
         String sql = """
